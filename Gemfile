@@ -1,12 +1,17 @@
 source 'https://rubygems.org'
 
+ruby "1.9.3"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.rc2'
 
+
+# added for Heroku -- needed when using rails 4
+gem 'rails_12factor', group: :production
+
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
-
-# PostgreSLQ DB
+# PostgreSLQ DB -- Heroku doesn't support sqlite3
 gem 'pg'
 
 # Use SCSS for stylesheets
